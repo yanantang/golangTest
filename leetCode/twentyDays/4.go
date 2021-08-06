@@ -12,7 +12,7 @@ func reverseString(s []byte) {
 
 /* 557. 反转字符串中的单词 III
 https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/submissions/
- */
+*/
 func reverseWords(s string) string {
 	arrs := []byte(s)
 	space := 0
@@ -31,4 +31,23 @@ func reverseWords(s string) string {
 		arrs[j], arrs[len(s)-j-1+space] = arrs[len(s)-j-1+space], arrs[j]
 	}
 	return string(arrs)
+}
+
+func reverseWordsDemo(s string) string {
+	length := len(s)
+	ret := []byte{}
+	for i := 0; i < length; {
+		start := i
+		for i < length && s[i] != ' ' {
+			i++
+		}
+		for p := start; p < i; p++ {
+			ret = append(ret, s[start+i-1-p])
+		}
+		for i < length && s[i] == ' ' {
+			i++
+			ret = append(ret, ' ')
+		}
+	}
+	return string(ret)
 }
