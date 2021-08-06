@@ -23,4 +23,7 @@ func Test_twoSum(t *testing.T) {
 	fmt.Printf("rotate %+v== []int{4,5,6,7,1,2,3}", s)
 }
 
-
+func Test_reverseWords(t *testing.T) {
+	s := reverseWords("Let's take LeetCode contest")
+	fmt.Printf("reverseWords %+v== s'teL ekat edoCteeL tsetnoc", s)
+}
