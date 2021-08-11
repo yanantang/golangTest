@@ -72,3 +72,42 @@ func Test_maxAreaOfIsland(t *testing.T) {
 	fmt.Printf("maxAreaOfIsland %+v== 6", s)
 
 }
+
+func Test_orangesRotting(t *testing.T) {
+	s := orangesRotting([][]int{
+		{2, 1, 1},
+		{1, 1, 0},
+		{0, 1, 1},
+	})
+	fmt.Printf("orangesRotting %+v== 4", s)
+
+	s = orangesRotting([][]int{
+		{0, 2},
+	})
+	fmt.Printf("orangesRotting %+v== 0", s)
+
+	s = orangesRotting([][]int{
+		{1},
+	})
+	fmt.Printf("orangesRotting %+v== -1", s)
+
+	s = orangesRotting([][]int{
+		{0},
+	})
+	fmt.Printf("orangesRotting %+v== 0", s)
+
+	s = orangesRotting([][]int{
+		{2, 1, 1},
+		{1, 1, 1},
+		{0, 1, 2},
+	})
+	fmt.Printf("orangesRotting %+v== 2", s)
+
+	s = orangesRotting([][]int{
+		{2, 2},
+		{1, 1},
+		{0, 0},
+		{2, 0},
+	})
+	fmt.Printf("orangesRotting %+v== 1", s)
+}
